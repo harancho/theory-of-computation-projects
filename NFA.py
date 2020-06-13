@@ -1,5 +1,5 @@
 
-print("enter substring that contains no repeating character - ")
+print("enter substring to search - ")
 check=input()
 
 print("enter the string to checked substring \"{}\" in it by the concept of NFA - ".format(check))
@@ -23,11 +23,9 @@ for i in range(len(c)):
 		print(sol,end=" ")
 		continue
 
-	if sol==1 and c[i]!=check[sol-1]:
+	if c[i]!=check[sol-1]:
 		sol=0
 
-	if sol!=1 and c[i]!=check[sol]:
-		sol=0
 	print(sol,end=" ")
 
 if sol==len(check):
